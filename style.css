@@ -1,0 +1,153 @@
+/* Custom Keyframe Animations */
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 107, 0, 0.75),
+                 -0.05em -0.025em 0 rgba(255, 45, 0, 0.75),
+                 -0.025em 0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 107, 0, 0.75),
+                 -0.05em -0.025em 0 rgba(255, 45, 0, 0.75),
+                 -0.025em 0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 107, 0, 0.75),
+                 0.025em 0.025em 0 rgba(255, 45, 0, 0.75),
+                 -0.05em -0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 107, 0, 0.75),
+                 0.025em 0.025em 0 rgba(255, 45, 0, 0.75),
+                 -0.05em -0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 107, 0, 0.75),
+                 0.05em 0 0 rgba(255, 45, 0, 0.75),
+                 0 -0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 107, 0, 0.75),
+                 0.05em 0 0 rgba(255, 45, 0, 0.75),
+                 0 -0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 107, 0, 0.75),
+                 -0.025em -0.025em 0 rgba(255, 45, 0, 0.75),
+                 -0.025em -0.05em 0 rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(255, 107, 0, 0.4), 0 0 15px rgba(255, 107, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.8), 0 0 40px rgba(255, 45, 0, 0.4);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes neonFlicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.7;
+    filter: drop-shadow(0 0 2px rgba(255, 107, 0, 0.5));
+  }
+}
+
+/* Custom helper classes */
+.hero-glow {
+  background: radial-gradient(circle at 30% 30%, rgba(255, 107, 0, 0.15) 0%, transparent 70%);
+}
+
+.card-dark {
+  background: #111111;
+  border: 1px solid #1a1a2e;
+}
+
+.orange-pulse {
+  box-shadow: 0 0 15px rgba(255, 107, 0, 0.4);
+}
+
+.glitch-text {
+  text-shadow: 2px 0 #FF2D00, -2px 0 #FF6B00;
+}
+
+.stat-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #FF6B00, transparent);
+}
+
+.animate-glitch {
+  animation: glitch 1.5s infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulseGlow {
+  animation: pulseGlow 2s infinite;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-neonFlicker {
+  animation: neonFlicker 3s infinite;
+}
+
+/* Custom Hide Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom 3D Card flips */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.transform-preserve-3d {
+  transform-style: preserve-3d;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
